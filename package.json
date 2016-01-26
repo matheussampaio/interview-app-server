@@ -1,0 +1,25 @@
+{
+  "name": "interview-app-server",
+  "version": "0.0.0",
+  "homepage": "https://interview-app-server.herokuapp.com",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "1.14.2",
+    "errorhandler": "1.4.3",
+    "express": "4.13.4",
+    "method-override": "2.3.5",
+    "mongoose": "4.3.7",
+    "morgan": "1.6.1",
+    "node-restful": "0.2.5"
+  },
+  "engines": {
+    "node": "5.1.0",
+    "npm": "3.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.8.1"
+  }
+}
