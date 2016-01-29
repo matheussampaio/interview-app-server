@@ -7,13 +7,6 @@ var Question = restful.model('question', new mongoose.Schema({
       trim: true,
       required: true
     },
-    title: {
-      type: String,
-      trim: true,
-      required: true,
-      minlength: 5,
-      maxlength: 40
-    },
     answer: {
       type: String,
       trim: true,
