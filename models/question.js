@@ -1,8 +1,8 @@
-var restful = require('node-restful'),
-  mongoose = restful.mongoose;
+var restful = require('node-restful');
+var mongoose = restful.mongoose;
 
 var Question = restful.model('question', new mongoose.Schema({
-    description: {
+    question: {
       type: String,
       trim: true,
       required: true

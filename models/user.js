@@ -1,16 +1,7 @@
-var restful = require('node-restful'),
-  mongoose = restful.mongoose;
+var restful = require('node-restful');
+var mongoose = restful.mongoose;
 
 var User = restful.model('user', new mongoose.Schema({
-    username: {
-      type: String,
-      trim: true,
-      required: true,
-      lowercase: true,
-      minlength: 5,
-      maxlength: 40,
-      unique: true
-    },
     firstname: {
       type: String,
       trim: true,
