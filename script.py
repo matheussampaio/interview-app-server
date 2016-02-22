@@ -1,7 +1,7 @@
 import urllib
 import urllib2
 
-url = "http://interview-app-server.herokuapp.com/api/question"
+url = "http://jipa-server.herokuapp.com/api/question"
 
 dados = open("data.tsv").read().split("\n")
 

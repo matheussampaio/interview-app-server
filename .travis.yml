@@ -15,4 +15,4 @@ deploy:
   skip_cleanup: true
   buildpack: nodejs
   app:
-    master: interview-app-server
+    master: jipa-server
