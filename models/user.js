@@ -33,6 +33,10 @@ var User = restful.model('user', new mongoose.Schema({
       minlength: 5,
       maxlength: 40,
       unique: true
+    },
+    points: {
+      type: Number,
+      default: 0
     }
   }))
   .methods(['get', 'post', 'put', 'delete']);

@@ -26,20 +26,21 @@ After that, you can access [`http://localhost:3000`](http://localhost:3000).
 
 ### User
 
-Attribute | Type | Description
---- | --- | ---
-`firstname` | `string` | **Required**. User first name.
-`lastname` | `string` | **Required**. User last name.
-`password` | `string` | **Required**. User password.
-`email` | `string` | **Required**. User email.
+Attribute | Type | Required | Description
+--- | --- | :---: | ---
+`firstname` | `String` | **Required**. | User first name.
+`lastname` | `String` | **Required**. | User last name.
+`password` | `String` | **Required**. | User password.
+`email` | `String` | **Required**. | User email.
+`points`=`0` | `Number` | - | User reward points.
 
 ### Question
 
 Attribute | Type | Required | Description
---- | --- | --- | ---
-`question` | `string` | **Required** | Question.
-`answer` | `string` | **Required** | Question answer.
-`quiz`=`False` | `boolean` | - | `True` if it's a Quiz Question. `False` otherwise.
+--- | --- | :---: | ---
+`question` | `String` | **Required** | Question.
+`answer` | `String` | **Required** | Question answer.
+`quiz`=`False` | `Boolean` | - | `True` if it's a Quiz Question. `False` otherwise.
 `wrong_choices`=`[]` | `Array<String>` | - | Array of wrong answers.
 `likes`=`[]` | `Array<User>` | - | Array of users that liked this question.
 `dislikes`=`[]` | `Array<User>` | - | Array of users that disliked this question.
@@ -48,17 +49,17 @@ Attribute | Type | Required | Description
 ### Feedback
 
 Attribute | Type | Required | Description
---- | --- | --- | ---
-`description` | `string` | **Required** | Question.
+--- | --- | :---: | ---
+`description` | `String` | **Required** | Question.
 `user` | `User` | **Required** | Owner of the Feedback.
-`done`=`False` | `boolean` | - | `True` if the Feedback is marked as done. `False` otherwise.
-`read`=`False` | `boolean` | - | `True` if the Feedback is already read by some Admin. `False` otherwise.
+`done`=`False` | `Boolean` | - | `True` if the Feedback is marked as done. `False` otherwise.
+`read`=`False` | `Boolean` | - | `True` if the Feedback is already read by some Admin. `False` otherwise.
 
 ### Keyword
 
 Attribute | Type | Required | Description
---- | --- | --- | ---
-`name` | `string` | **Required** | Keyword name.
+--- | --- | :---: | ---
+`name` | `String` | **Required** | Keyword name.
 
 
 # Filters:
