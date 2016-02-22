@@ -2,6 +2,7 @@ import urllib
 import urllib2
 
 url = "http://jipa-server.herokuapp.com/api/question"
+# url = "http://localhost:3000/api/question"
 
 dados = open("data.tsv").read().split("\n")
 

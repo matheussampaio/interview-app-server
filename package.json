@@ -1,7 +1,7 @@
 {
-  "name": "interview-app-server",
+  "name": "jipa-server",
   "version": "0.0.0",
-  "homepage": "https://interview-app-server.herokuapp.com",
+  "homepage": "https://jipa-server.herokuapp.com",
   "private": true,
   "scripts": {
     "start": "node server.js"

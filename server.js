@@ -18,7 +18,7 @@ var mongoose = require('mongoose');
 
 // Here we find an appropriate database to connect to, defaulting to
 // localhost if we don't find one.
-var uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/interview-app-server';
+var uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/jipa-server';
 
 // Makes connection asynchronously. Mongoose will queue up database
 // operations and release them when the connection is complete.
@@ -58,7 +58,9 @@ app.use('/api', api(app));
 // serve index and view partials
 app.get('/', index.index);
 
-app.get('*', index.index);
+app.use(function(req, res, next) {
+  res.status(404).send({ error: 'Page not found', status: 404 });
+});
 
 /**
  * Start Server
