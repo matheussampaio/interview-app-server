@@ -22,6 +22,35 @@ $ node start
 ```
 After that, you can access [`http://localhost:3000`](http://localhost:3000).
 
+# Custom Routes:
+
+#### Bookmark a Question
+
+Set `"bookmark": false` if you want to unbookmark.
+
+**URL:** `POST: /api/question/:id/bookmark`  
+**Body:**
+```json
+{
+  "user": "<user_id>",
+  "bookmark": true
+}
+```
+
+#### Like or Dislike a Question
+
+Set `"like": true` if you want to like, set `"dislike": true` to dislike or set both to false to remove like/dislike.
+
+**URL:** `POST: /api/question/:id/like`  
+**Body:**
+```json
+{
+  "user": "<user_id>",
+  "like": true,
+  "dislike": false
+}
+```
+
 # Resources:
 
 ### User
@@ -33,6 +62,9 @@ Attribute | Type | Required | Description
 `password` | `String` | **Required**. | User password.
 `email` | `String` | **Required**. | User email.
 `points`=`0` | `Number` | - | User reward points.
+`likes`=`[]` | `Array<Question>` | - | Questions that the user liked.
+`dislikes`=`[]` | `Array<Question>` | - | Questions that the user disliked.
+`bookmark`=`[]` | `Array<Question>` | - | Questions that the user bookmark.
 
 ### Question
 
@@ -44,6 +76,7 @@ Attribute | Type | Required | Description
 `wrong_choices`=`[]` | `Array<String>` | - | Array of wrong answers.
 `likes`=`[]` | `Array<User>` | - | Array of users that liked this question.
 `dislikes`=`[]` | `Array<User>` | - | Array of users that disliked this question.
+`bookmark`=`[]` | `Array<User>` | - | Array of users that bookmark this question.
 `keyword`=`[]` | `Array<Keyword>` | - | Array of keywords.
 
 ### Feedback

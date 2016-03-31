@@ -37,7 +37,19 @@ var User = restful.model('user', new mongoose.Schema({
     points: {
       type: Number,
       default: 0
-    }
+    },
+    likes: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'question'
+    }],
+    dislikes: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'question'
+    }],
+    bookmark: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'question'
+    }],
   }))
   .methods(['get', 'post', 'put', 'delete']);
 
