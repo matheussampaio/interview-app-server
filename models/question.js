@@ -47,7 +47,7 @@ Question.route('bookmark.post', {
       var updateUser = {};
 
       // add
-      if (req.body.bookmark) {
+      if (req.body.bookmark === true || req.body.bookmark === "true") {
         updateQuestion = {
           $addToSet: {
             bookmark: req.body.user
@@ -100,7 +100,7 @@ Question.route('like.post', {
       var updateUser = {};
 
       // add like and remove dislikes
-      if (req.body.like) {
+      if (req.body.like === true || req.body.like === "true") {
         updateQuestion = {
           $addToSet: {
             likes: req.body.user
@@ -120,7 +120,7 @@ Question.route('like.post', {
         };
 
       // add dislikes and remove from likes
-      } else if (req.body.dislike) {
+    } else if (req.body.dislike === true || req.body.dislike === "true") {
         updateQuestion = {
           $pull: {
             likes: req.body.user
