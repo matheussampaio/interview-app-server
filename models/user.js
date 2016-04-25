@@ -53,4 +53,27 @@ var User = restful.model('user', new mongoose.Schema({
   }))
   .methods(['get', 'post', 'put', 'delete']);
 
+User.route('points.post', {
+    detail: true,
+    handler: function (req, res, next) {
+      var updateUser = {
+        $inc: {
+          points: req.body.points
+        }
+      };
+
+      var options = {
+        new: true
+      };
+
+      User.findByIdAndUpdate(req.params.id, updateUser, options, function (err, user) {
+        if (!err) {
+          res.status(200).send(user);
+        } else {
+          res.status(400).send(err);
+        }
+      });
+    }
+});
+
 module.exports = User;

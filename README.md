@@ -51,6 +51,16 @@ Set `"like": true` if you want to like, set `"dislike": true` to dislike or set 
 }
 ```
 
+#### Add Points to User
+
+**URL:** `POST: /api/user/:id/points`  
+**Body:**
+```json
+{
+  "points": 42
+}
+```
+
 # Resources:
 
 ### User
