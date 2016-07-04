@@ -7,12 +7,12 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "body-parser": "1.14.2",
+    "body-parser": "1.15.0",
     "errorhandler": "1.4.3",
     "express": "4.13.4",
     "method-override": "2.3.5",
-    "mongoose": "4.3.7",
-    "morgan": "1.6.1",
+    "mongoose": "4.4.8",
+    "morgan": "1.7.0",
     "node-restful": "0.2.5"
   },
   "engines": {
@@ -20,6 +20,6 @@
     "npm": "3.5.0"
   },
   "devDependencies": {
-    "nodemon": "1.8.1"
+    "nodemon": "1.9.1"
   }
 }
